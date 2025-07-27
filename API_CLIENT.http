@@ -1,0 +1,35 @@
+
+### Buscar todos os itens
+GET http://localhost:3000/api/items
+
+
+
+### Criar um novo item
+POST http://localhost:3000/api/items
+Content-Type: application/json
+
+{
+    "name": "My First Item",
+    "description": "A sample item created for testing."
+}
+
+
+
+### Buscar um item pelo ID
+GET http://localhost:3000/api/items/7824d78c-c38f-4d2b-82e6-53c8a9d2887f
+
+
+
+### Atualizar um item pelo ID
+PUT http://localhost:3000/api/items/7824d78c-c38f-4d2b-82e6-53c8a9d2887f
+Content-Type: application/json
+
+{
+    "name": "My Updated Item",
+    "description": "The description has been updated."
+}
+
+
+
+### Deletar um item pelo ID
+DELETE http://localhost:3000/api/items/7824d78c-c38f-4d2b-82e6-53c8a9d2887f
