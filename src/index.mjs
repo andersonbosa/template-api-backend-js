@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import { memoryRepository } from './data/memory.mjs'
 import { sqliteRepository } from './data/sqlite.mjs'
+import morgan from 'morgan'
 
 dotenv.config()
 
@@ -10,6 +11,8 @@ const PORT = process.env.PORT || 3000
 
 // Middleware para analisar corpos JSON
 app.use(express.json())
+app.use(morgan('combined'))
+
 
 // Seleciona o repositório com base na variável de ambiente
 const dbType = process.env.DB_TYPE || 'memory'
